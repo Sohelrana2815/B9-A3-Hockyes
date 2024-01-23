@@ -13,6 +13,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!--end tailwind css and daisy ui cdn -->
+
+    <!--font awesome cdn  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end -->
+
+    <!--start script for color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "common-color": "#FF4240",
+              "common-color-black": "#424247",
+              "gradient-start": "gradient-end",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- end script for color -->
+
     <!-- google font start -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,59 +58,150 @@
     </style>
   </head>
   <body class="font-manrope">
-    <div>
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <div class="">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Pages</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
+    <header>
+      <!-- nav start -->
+      <nav class="pt-3 lg:p-8">
+        <div>
+          <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <div class="flex flex-col gap-2">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Pages</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                  </div>
+                </ul>
               </div>
-            </ul>
-          </div>
-          <a class="text-4xl text-[#131318] font-extrabold"
-            >Hockye<span class="text-[#FF4240] text-4xl font-extrabold">’</span
-            >s</a
-          >
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <div>
-              <a href="">Home</a>
-              <a href="">About</a>
-              <a href="">Pages</a>
-              <a href="">Blog</a>
-              <a href="">Contact</a>
+              <a class="text-2xl lg:text-4xl text-[#131318] font-extrabold"
+                >Hockye<span class="text-[#FF4240] lg:text-4xl font-extrabold"
+                  >’</span
+                >s</a
+              >
             </div>
-          </ul>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <div
+                  class="lg:w-[407px] mx-auto text-base text-common-color-black flex justify-between"
+                >
+                  <a href=""
+                    ><span class="text-common-color font-bold">Home</span></a
+                  >
+                  <a href="">About</a>
+                  <a href="">Pages</a>
+                  <a href="">Blog</a>
+                  <a href="">Contact</a>
+                </div>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <i class="fa-solid fa-magnifying-glass hidden mr-6"></i>
+              <a class="btn lg:w-[148px] px-6 py-4 bg-common-color text-white"
+                >Get Ticket</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+      </nav>
+      <!-- nav end -->
+
+      <!-- banner section -->
+
+      <div class="p-4 lg:w-[1170px] mx-auto">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img
+              src="Images/1.png"
+              class="lg:w-full lg:h-full w-[335px] h-[200px] mx-auto rounded-xl"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle bg-black text-white">❮</a>
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img
+              src="Images/1.png"
+              class="lg:w-full lg:h-full w-[335px] h-[200px] mx-auto rounded-xl"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a>
+              <a href="#slide3" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img
+              src="Images/1.png"
+              class="lg:w-full lg:h-full w-[335px] h-[200px] mx-auto rounded-xl"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a>
+              <a href="#slide4" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img
+              src="Images/1.png"
+              class="lg:w-full lg:h-full w-[335px] h-[200px] mx-auto rounded-xl"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle bg-black text-white">❮</a>
+              <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <!-- end banner-section -->
+      <div class="relative flex w-[335px] mx-auto">
+        <div
+          class="card flex-col absolute lg:-top-52 lg:start-2/4 lg:w-[560px] lg:h-[165px] bg-[#131318] rounded-2xl"
+        >
+          <div class="card-body">
+            <h3 class="text-white font-extrabold lg:text-2xl">
+              Meet all the heroes from the field.
+            </h3>
+            <p class="text-white font-medium lg:text-base">
+              Hockey, a sport deeply rooted in icy traditions, has transformed
+              over the years from a casual outdoor activity on frozen ponds to a
+              global spectacle played in state-of-the-art arenas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--end banner section -->
+    </header>
+    <!-- main section -->
+    <main></main>
+    <!-- end main section -->
+    <footer></footer>
   </body>
 </html>
